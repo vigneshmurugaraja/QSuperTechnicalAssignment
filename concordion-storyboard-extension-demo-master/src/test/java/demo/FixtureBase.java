@@ -35,7 +35,7 @@ public abstract class FixtureBase {
         @Override
         public Browser create() {
         	//New Change: Introduced the gecko driver to invoke Firefox browser
-        	System.setProperty("webdriver.gecko.driver", "C:\\Selenium-Vignesh\\01_Downloads\\geckodriver-v0.18.0-win64\\geckodriver.exe"); 
+        	//System.setProperty("webdriver.gecko.driver", "C:\\Selenium-Vignesh\\01_Downloads\\geckodriver-v0.18.0-win64\\geckodriver.exe"); 
         	Browser browser = new Browser();
             return browser;
         }

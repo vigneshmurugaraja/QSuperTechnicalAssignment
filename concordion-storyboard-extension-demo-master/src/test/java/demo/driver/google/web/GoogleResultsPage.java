@@ -31,6 +31,10 @@ public class GoogleResultsPage {
     @CacheLookup
     @FindBy(id = "cwos")
     private WebElement calcResultLink;
+    
+    @CacheLookup
+    @FindBy(xpath="/html/head/title")
+    private WebElement queryStringResultPage;
 
     private static Logger logger = LoggerFactory.getLogger(GoogleResultsPage.class.getName());
 
@@ -76,6 +80,13 @@ public class GoogleResultsPage {
         logger.info(String.format("result is '%s'", result));
         return result;
     }
+    
+    public String getQueryStringResultPage() {
+        String qStrresult = queryStringResultPage.getText();
+        logger.info(String.format("result is '%s'", qStrresult));
+        return qStrresult;
+    }
+    
 
     private void waitForFooter() {
         WebDriverWait wait = new WebDriverWait(browser.getDriver(), 30);

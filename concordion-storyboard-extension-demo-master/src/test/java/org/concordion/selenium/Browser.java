@@ -11,7 +11,9 @@ public class Browser {
     private WebDriver driver;
 
     public Browser() {
-        driver = new FirefoxDriver();
+    	 //New Change: Introduced the gecko driver to invoke Firefox browser
+    	 System.setProperty("webdriver.gecko.driver", "C:\\Selenium-Vignesh\\01_Downloads\\geckodriver-v0.18.0-win64\\geckodriver.exe");
+    	 driver = new FirefoxDriver();
 
          EventFiringWebDriver efwd = new EventFiringWebDriver(driver);
          efwd.register(new SeleniumEventLogger());

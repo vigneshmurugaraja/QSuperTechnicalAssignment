@@ -38,6 +38,14 @@ public class StoryboardDemoFixture extends FixtureBase {
     public String getCalculatorResult() {
         return resultsPage.getCalculatorResult();
     }
+    
+    /**  
+     * Returns the title of the page
+     */
+    //Added this new function
+    public String getQueryStringResultPage() {
+        return resultsPage.getQueryStringResultPage();
+    }
 
     public boolean makeRestCall(String url) throws IOException {
         String responseMessage = new HttpDriver().get(url);
